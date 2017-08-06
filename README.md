@@ -1,1 +1,1 @@
-# rise-datascience-notebook
+# extend-datascience-notebook
