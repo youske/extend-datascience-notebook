@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y git libtool make libffi-dev libzmq3-dev
 
 USER $NB_USER
 RUN cd /tmp && \
-    pip install numpy param pyyaml py_d3 paramiko && \
+    pip install numpy param pyyaml py_d3 paramiko requests cython ansible && \
     pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master && \
     pip install jupyter_nbextensions_configurator jupyter_dashboards jupyterthemes ipywidgets bash_kernel pivottablejs && \
-    conda install -c ioam holoviews bokeh plotly && \
+    conda install -c ioam holoviews bokeh plotly seaborn && \
     conda install ruby && \
     wget -q 'https://github.com/pdonorio/RISE/archive/master.tar.gz' -O - | tar zxf - && \
     cd RISE-master && python3 setup.py install && cd .. && \
