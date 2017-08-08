@@ -10,4 +10,4 @@ RUN cd /tmp && \
     jupyter dashboards quick-setup --sys-prefix && \
     jupyter nbextensions_configurator enable --user && \
     jupyter contrib nbextension install --user && \
-    python -m bash_kernel.install
+    python -m bash_kernel.install --user
